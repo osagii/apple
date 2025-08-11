@@ -19,10 +19,9 @@ const okLog=(n,m)=>console.log(ts(), chalk.green(`[${n}]`), chalk.green(m));
 const info =(n,m)=>console.log(ts(), chalk.cyan(`[${n}]`),  chalk.cyan(m));
 const warn =(n,m)=>console.log(ts(), chalk.yellow(`[${n}]`), chalk.yellow(m));
 
-/* ========== Banner (besar & jelas) ========== */
 function banner(){
   const title = figlet.textSync('CREATE BY NANDAA', {
-    font: 'Big',           // tebal & mudah dibaca di terminal
+    font: 'Big',           
     horizontalLayout: 'fitted',
     verticalLayout: 'default',
   });
@@ -61,7 +60,6 @@ const DEFAULT_HEADERS = {
 
 /* ========== Token loader ========== */
 const TOKENS_FILE = path.resolve('token.txt');
-// Baris: nanda|__Host-authjs.csrf-token=...; __Secure-authjs.callback-url=...; session-token=...
 if (!fs.existsSync(TOKENS_FILE)) die('token.txt tidak ditemukan.');
 const ACCOUNTS = fs.readFileSync(TOKENS_FILE,'utf8')
   .split('\n').map(s=>s.trim()).filter(Boolean).filter(s=>!s.startsWith('#'))
