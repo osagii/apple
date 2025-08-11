@@ -22,3 +22,4 @@ ROUTE_PLANT=core.plantSeed
 ROUTE_HARVEST=core.harvest
 ROUTE_BUY_SEED=core.buyItem
 EOF
+open token.txt and put your cookie token
