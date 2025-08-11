@@ -2,9 +2,7 @@ install dependensi
 npm i axios dotenv figlet chalk@4.1.2
 
 #ENV
-cat > .env << 'EOF'
-BASE_URL=https://app.appleville.xyz
-
+nano .env
 # slot yang kamu punya (pisah koma)
 SLOT_INDEXES=1,2
 
